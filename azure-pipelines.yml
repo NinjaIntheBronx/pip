@@ -54,3 +54,11 @@ jobs:
 
   - script: python setup.py sdist
     displayName: 'Build sdist'
+
+  # Publish build artifacts to Azure Pipelines/TFS or a file share
+  - task: PublishBuildArtifacts@1
+    inputs:
+      pathtoPublish: 'dist' 
+      artifactName: 'dist' 
+      publishLocation: 'Container'
+    displayName: 'Publish artifacts: dist'
