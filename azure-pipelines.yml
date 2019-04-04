@@ -52,7 +52,7 @@ jobs:
       versionSpec: '3.x'
       architecture: 'x64'
 
-  - script: pip instll wheel
+  - script: pip install wheel
     displayName: install wheel
 
   - script: python setup.py sdist bdist_wheel
