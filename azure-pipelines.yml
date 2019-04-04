@@ -52,7 +52,10 @@ jobs:
       versionSpec: '3.x'
       architecture: 'x64'
 
-  - script: python setup.py sdist
+  - script: pip instll wheel
+    displayName: install wheel
+
+  - script: python setup.py sdist bdist_wheel
     displayName: 'Build sdist'
 
   # Publish build artifacts to Azure Pipelines/TFS or a file share
